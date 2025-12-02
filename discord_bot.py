@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 
 # Replace 'YOUR_TOKEN_HERE' with your actual Discord bot token
-TOKEN = 'YOUR_TOKEN_HERE'
+TOKEN = os.getenv("TOKEN") 
 
 # Define intents
 intents = discord.Intents.default()
