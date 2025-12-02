@@ -1,6 +1,20 @@
 import os
 import discord
 from discord.ext import commands
+import socket
+# Create a socket object
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+# Define the port on which you want to connect
+port = 10000
+
+# Bind to the port
+s.bind(('', port))
+
+# Put the socket into listening mode
+s.listen(5)
+
+print('Server is listening')
 
 # Replace 'YOUR_TOKEN_HERE' with your actual Discord bot token
 TOKEN = os.getenv('TOKEN')
