@@ -1,8 +1,9 @@
+import os
 import discord
 from discord.ext import commands
 
 # Replace 'YOUR_TOKEN_HERE' with your actual Discord bot token
-TOKEN = os.getenv("TOKEN") 
+TOKEN = os.getenv("TOKEN")
 
 # Define intents
 intents = discord.Intents.default()
@@ -20,12 +21,12 @@ async def on_ready():
 # Command to respond to
 @bot.command()
 async def hello(ctx):
-    await ctx.send('Hello! 👋 How can I assist you today?')
+    await ctx.send('bye')
 
 # Command to ping the bot
 @bot.command()
 async def ping(ctx):
-    await ctx.send('Pong! 🏓')
+    await ctx.send('Bong! 🏓')
 
 # Run the bot
 bot.run(TOKEN)
